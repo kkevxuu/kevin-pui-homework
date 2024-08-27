@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: idk yet
+Deployed website: kkevxuu.github.io/kevin-pui-homework/
 
-Repository link: kkevxuu.github.io/kevin-pui-homework/
+Repository link: https://github.com/kkevxuu/kevin-pui-homework
