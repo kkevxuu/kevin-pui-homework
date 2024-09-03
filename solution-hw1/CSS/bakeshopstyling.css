@@ -1,0 +1,159 @@
+/*bakeshop 1 styling*/
+
+.mainlogopic{
+    width: 400px;
+}
+
+.logobreak{
+    border: 3px solid black;
+}
+
+h1{
+    font-family: "Trebuchet MS";
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+h2{
+    font-family: "Trebuchet MS";
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.slogan{
+    font-family: "Trebuchet MS";
+    text-align: center;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.gallerypic {
+    border: 5px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+/*
+.gallerypic:hover {
+    background-color: #8a1818;
+
+}
+*/
+
+h3{
+    font-family: "trebuchet MS";
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+    text-decoration: underline; 
+}
+
+h4{
+    font-family: "trebuchet MS";
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+/*bakeshop 2 styling*/
+
+.itempic{
+    border: 5px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+.itemdesc{
+    font-family: "trebuchet MS";
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.custom{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "trebuchet MS";
+    font-size: 25px;
+    font-weight: lighter;
+    appearance: ;
+    
+
+}
+
+.itemprice{
+    font-family: "trebuchet MS";
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.cartbutton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "trebuchet MS";
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/*bakeshop 3 styling*/
+
+.cartpic {
+    border: 5px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px
+}
+
+.remove{
+    font-family: "trebuchet MS";
+    text-align: center;
+    font-size: 15px;
+    font-weight: lighter;
+
+}
+
+.cartdesc{
+    font-family: "trebuchet MS";
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.cartitemprice{
+    font-family: "trebuchet MS";
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+
+}
+
+.checkoutbreak{
+    width: 600px;
+    border: 3px solid black;
+}
+
+.carttotal{
+    font-family: "trebuchet MS";
+    text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.checkout{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "trebuchet MS";
+    font-weight: bold;
+    font-size: 25px;
+}
