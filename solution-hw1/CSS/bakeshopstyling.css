@@ -1,4 +1,9 @@
+
 /*bakeshop 1 styling*/
+
+*{
+    font-family: "Trebuchet MS";
+}
 
 .mainlogopic{
     width: 400px;
@@ -6,27 +11,42 @@
 
 .logobreak{
     border: 3px solid black;
+    margin-top: 20px
 }
 
 h1{
-    font-family: "Trebuchet MS";
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.p1{
+    background-color: yellow;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.p3{
+    background-color: yellow;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: bold;
 }
 
 h2{
-    font-family: "Trebuchet MS";
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: lighter;
 }
 
 .slogan{
-    font-family: "Trebuchet MS";
     text-align: center;
     font-size: 40px;
     font-weight: lighter;
+    margin-top: 100px;
 }
 
 .gallerypic {
@@ -37,26 +57,23 @@ h2{
     width: 400px;
 }
 
-/*
-.gallerypic:hover {
-    background-color: #8a1818;
-
-}
-*/
-
 h3{
-    font-family: "trebuchet MS";
     text-align: center;
-    font-size: 25px;
+    font-size: 37px;
     font-weight: lighter;
     text-decoration: underline; 
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 h4{
-    font-family: "trebuchet MS";
     text-align: center;
-    font-size: 25px;
+    font-size: 37px;
     font-weight: lighter;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    text-align: left;
 }
 
 /*bakeshop 2 styling*/
@@ -70,35 +87,44 @@ h4{
 }
 
 .itemdesc{
-    font-family: "trebuchet MS";
-    text-align: center;
-    font-size: 25px;
+    font-size: 37px;
+    width: 450px;
     font-weight: lighter;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
 }
 
 .custom{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    font-family: "trebuchet MS";
-    font-size: 25px;
+    width: 450px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 37px;
     font-weight: lighter;
+    border: 5px solid black;
+    border-radius: 0px;
 }
 
 .itemprice{
-    font-family: "trebuchet MS";
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .cartbutton{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "trebuchet MS";
+    margin-top:12px;
+    margin-left: 35px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
+    width: 280px;
+    height: 70px;
+    border: 5px solid black;
+    border-radius: 0px;
+    background-color: yellow;
 }
 
 /*bakeshop 3 styling*/
@@ -106,43 +132,40 @@ h4{
 .cartpic {
     border: 5px solid black;
     display: block;
+    margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
     width: 200px
 }
 
 .remove{
-    font-family: "trebuchet MS";
     text-align: center;
-    font-size: 15px;
-    font-weight: lighter;
-
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .cartdesc{
-    font-family: "trebuchet MS";
     text-align: center;
-    font-size: 25px;
+    font-size: 37px;
     font-weight: lighter;
 }
 
 .cartitemprice{
-    font-family: "trebuchet MS";
     text-align: center;
-    font-size: 25px;
+    font-size: 37px;
     font-weight: lighter;
-
 }
 
 .checkoutbreak{
-    width: 600px;
+    margin-top: 50px;
+    width: 750px;
     border: 3px solid black;
 }
 
 .carttotal{
-    font-family: "trebuchet MS";
     text-align: center;
-    font-size: 25px;
+    font-size: 37px;
     font-weight: lighter;
 }
 
@@ -150,7 +173,51 @@ h4{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    font-family: "trebuchet MS";
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
+    margin-top:12px;
+    width: 250px;
+    height: 70px;
+    border: 5px solid black;
+    border-radius: 0px;
+    background-color: yellow;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*flexbox stuff*/
+
+.gallerybox{
+    display: flex;
+    box-sizing: border-box;
+    height: auto;
+    width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.gallerybox:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.gallerybox:hover h3 {
+    font-weight: bold;
+}
+
+.addtocart{
+    display: flex;
+    box-sizing: border-box;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    padding-left: 70px;
 }
