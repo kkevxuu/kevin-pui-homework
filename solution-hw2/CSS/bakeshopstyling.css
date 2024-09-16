@@ -77,12 +77,12 @@ h4{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
+    height: 600px;
 }
 
 .itemdesc{
-    font-size: 37px;
-    width: 450px;
+    font-size: 30px;
+    width: 380px;
     font-weight: lighter;
     margin-left: auto;
     margin-right: auto;
@@ -93,11 +93,11 @@ h4{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 450px;
+    width: 380px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
-    font-size: 37px;
+    font-size: 30px;
     font-weight: lighter;
     border: 5px solid black;
     border-radius: 0px;
@@ -107,14 +107,15 @@ h4{
     text-align: center;
     font-size: 30px;
     font-weight: bold;
+    margin-top: -42px;
 }
 
 .cartbutton{
-    margin-top:12px;
-    margin-left: 35px;
+    margin-top:-60px;
+    margin-left: 30px;
     font-weight: bold;
-    font-size: 30px;
-    width: 280px;
+    font-size: 30px;    
+    width: 250px;
     height: 70px;
     border: 5px solid black;
     border-radius: 0px;
@@ -129,46 +130,46 @@ h4{
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
-    width: 200px
+    width: 150px
 }
 
 .remove{
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     font-weight: bold;
     text-decoration: underline;
 }
 
 .cartdesc{
-    text-align: center;
-    font-size: 37px;
+    text-align: left;
+    font-size: 27px;
     font-weight: lighter;
 }
 
 .cartitemprice{
-    text-align: center;
-    font-size: 37px;
+    text-align: left;
+    font-size: 32px;
     font-weight: lighter;
 }
 
 .checkoutbreak{
-    margin-top: 50px;
-    width: 750px;
+ 
+    width: 785px;
     border: 3px solid black;
+    margin-left: 430px;
 }
 
 .carttotal{
-    text-align: center;
-    font-size: 37px;
+    text-align: left;
+    font-size: 32px;
     font-weight: lighter;
 }
 
 .checkout{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 900px;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 27px;
     margin-top:12px;
     width: 250px;
     height: 70px;
@@ -279,7 +280,7 @@ a{
     margin-left: 120px;
 }
 
-/*gallery*/
+/*page 1 gallery*/
 
 .gridbox1{
     display: flex;
@@ -299,5 +300,80 @@ a{
     margin-right: auto;
 }
 
+/*page 2*/
 
+.p2box1{
+    display: flex;
+    box-sizing: border-box;
+
+
+}
+
+.p2box2L{
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 60px;
+}
+
+.p2box2R{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+/*page 3*/
+
+.p3boxa{
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-left: 440px;
+}
+
+.p3boxb{
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 440px;
+}
+
+.p3box2a{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-top: -75px;
+    margin-right: 30px;
+}
+
+.p3box2b{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-top: -75px;
+    margin-right: 30px;
+}
+
+.priceboxa{
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 160px;
+    margin-top: 40px;
+}
+
+.priceboxb{
+    display: flex;
+    box-sizing: border-box;
+    margin-left: 30px;
+    margin-top: 40px;
+
+}
+
+.totalbox{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 525px;
+    margin-left: 630px;
+}
 
