@@ -60,7 +60,6 @@ function packingChange(chosenPack){
 
 //Make a function that calculates and displays final price
 function calcPrice(){
-    console.log("something");
     let finalPrice = newRollPrice * packSize;
     let twoDecimal = finalPrice.toFixed(2);
     priceDisplay.innerText = "$" + twoDecimal;
