@@ -14,9 +14,9 @@ let packOptions = {
 };
 
 //Assigning variables using selectors
-let glazeDisplay = document.getElementById("glazedropdown");
-let packDisplay  = document.getElementById("packdropdown");
-let priceDisplay = document.getElementById("itemprice");
+let glazeDisplay = document.querySelector("#glazedropdown");
+let packDisplay  = document.querySelector("#packdropdown");
+let priceDisplay = document.querySelector("#itemprice");
 
 //Setting default price and packsize
 const baseRollPrice = 2.49;
@@ -66,9 +66,5 @@ function calcPrice(){
     
 
 };
-
-
-
-//dont forget to inject js
 
 
