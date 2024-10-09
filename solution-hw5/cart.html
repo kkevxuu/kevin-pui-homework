@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>cart</title>
+    <link rel="stylesheet" type="text/css" href="CSS/bakeshopstyling.css">
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/bakeshopcart.js"></script>
+  </head>
+  <body>
+    <!--logo & navigation-->
+    <div class="box1">
+      <div class="box2L">
+        <a href="index.html">
+          <img class="mainlogopic" src="assets/logo/logo-01.svg" alt="logo">
+        </a>
+      </div>
+      <div class="box2R">
+        <div class="box3_1">
+          <div class="box4_1">
+            <a href="index.html">
+              <h1>PRODUCTS</h1>
+            </a>
+          </div>
+          <div class="box4_2">
+            <a href="cart.html">
+              <h2 class="p3">CART</h2>
+            </a>
+          </div>
+        </div>
+        <div class="box3_2">
+          <hr class="logobreak"> 
+        </div>
+        <div class="box3_3">
+          <p class="slogan">Shopping cart<p>
+        </div>
+      </div>
+    </div>
+    <!--content-->
+    <div id = "cartContainer">
+      <template id="cartTemplate">
+        <div class="cartItem">
+          <div class="p3boxa">
+            <div class="p3box2a">
+              <img class="cartPic" src="assets/products/original-cinnamon-roll.jpg" alt="original cinnamon roll">
+              <p class="remove">Remove</p>
+            </div>
+            <p class="templateRollName">Original Cinnamon Roll</p>
+            <p class="templateGlazing">Keep original</p>
+            <p class="templatePackSize">Pack Size: 1 </p>
+            <div class="priceboxa">
+            <p class="templateItemPrice">$ 2.49</p>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    
+    <hr class="checkoutbreak">
+    <div class="totalbox">
+      <p class="carttotal">Total:</p>
+      <p class="carttotal">$ 29.94</p>
+    </div>
+    <button class="checkout">Checkout</button>
+  </body>
+</html>
