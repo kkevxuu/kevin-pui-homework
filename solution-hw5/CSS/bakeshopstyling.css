@@ -160,7 +160,13 @@ h4{
     margin-left: 430px;
 }
 
-.carttotal{
+.cartTotal{
+    text-align: left;
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+.cartTotalAmount{
     text-align: left;
     font-size: 32px;
     font-weight: lighter;

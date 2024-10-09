@@ -85,12 +85,15 @@ function updateElement(rollItem){
     templateName.innerText = `${rollItem.type} cinnamon roll`;
     templateGlaze.innerText = rollItem.glazing;
     templatePack.innerText = `Pack Size: ${rollItem.size}`;
+    templatePrice.innertext = rollItem.basePrice;
    //price calculations
     const rollBasePrice = rollItem.basePrice;
     console.log(rollBasePrice);
     //use glazeOptions and packOptions objects defined in HW4 to access adjusted values
     const calculatedPrice = ((rollBasePrice + glazeOptions[rollItem.glazing]) * packOptions[Number(rollItem.size)]).toFixed(2);
-    templatePrice.innerText = `$ ${calculatedPrice}`;
+    //get reference to totalprice outside template and set it to total
+    const cartTotal = document.querySelector(".cartTotalPrice");
+    cartTotal.innerText = `$ ${calculatedPrice}`;
 }
 
 function deleteItem(rollItem){
