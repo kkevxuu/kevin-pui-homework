@@ -92,8 +92,10 @@ function updateElement(rollItem){
     //use glazeOptions and packOptions objects defined in HW4 to access adjusted values
     const calculatedPrice = ((rollBasePrice + glazeOptions[rollItem.glazing]) * packOptions[Number(rollItem.size)]).toFixed(2);
     //get reference to totalprice outside template and set it to total
-    const cartTotal = document.querySelector(".cartTotalPrice");
-    cartTotal.innerText = `$ ${calculatedPrice}`;
+    const total = document.querySelector(".cartTotalAmount");
+    console.log(total);
+    console.log(calculatedPrice);
+    total.innerText = `$ ${calculatedPrice}`;
 }
 
 function deleteItem(rollItem){
