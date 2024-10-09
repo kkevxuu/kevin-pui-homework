@@ -143,13 +143,16 @@ h4{
 
 .templateRollName, .templatePackSize, .templateGlazing{
     text-align: left;
-    font-size: 27px;
+    font-size: 22px;
     font-weight: lighter;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 }
 
 .templateItemPrice{
     text-align: left;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: lighter;
 }
 
@@ -330,6 +333,14 @@ a{
 }
 
 /*page 3*/
+
+.descriptionsbox{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    
+
+}
 
 .p3boxa{
     display: flex;
