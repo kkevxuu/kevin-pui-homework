@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>details</title>
+    <link rel="stylesheet" type="text/css" href="CSS/bakeshopstyling.css">
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/cartsaving.js"></script>
+    <script defer src="js/bakeshopcalc.js"></script>
+   
+  </head>
+  <body>
+    <!--logo & navigation-->
+    <div class="box1">
+      <div class="box2L">
+        <a href="index.html">
+          <img class="mainlogopic" src="assets/logo/logo-01.svg" alt="logo">
+        </a>
+      </div>
+      <div class="box2R">
+        <div class="box3_1">
+          <div class="box4_1">
+            <a href="index.html">
+              <h1 class="p1">PRODUCTS</h1>
+            </a>
+          </div>
+          <div class="box4_2">
+            <a href="cart.html">
+              <h2>CART</h2>
+            </a>
+          </div>
+        </div>
+        <div class="box3_2">
+          <hr class="logobreak"> 
+        </div>
+        <div class="box3_3">
+          <p class="slogan">Original cinnamon roll<p>
+        </div>
+      </div>
+    </div>
+    <!--content-->
+    <div class="p2box1">
+      <div class="p2box2L">
+        <img class="itempic" src="assets/products/original-cinnamon-roll.jpg" alt="original cinnamon roll">
+      </div>
+      <div class="p2box2R">
+        <p class="itemdesc"> Customize our delicious, hand-made cinnamon roll to your liking!</p>
+        <br>
+        <p class="itemdesc"> Glazing:</p>
+        <select id="glazedropdown" onchange="glazingChange(this)">
+        </select>
+        <p class="itemdesc">Pack size:</p>
+        <select id="packdropdown"onchange="packingChange(this)">
+        </select>
+        <div class="addtocart">
+          <p id="itemprice">$ 2.49</p>
+          <button class="cartbutton" onClick = "addToCart()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

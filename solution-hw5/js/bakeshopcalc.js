@@ -103,5 +103,3 @@ function addToCart(){
     console.log(cart);
 
 };
-
-
