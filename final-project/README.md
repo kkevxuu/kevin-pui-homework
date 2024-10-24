@@ -9,7 +9,7 @@
 Idea 1:
 Three.JS focused interactive portfolio
 
-![portfolio idea 1](IMG_1380.jpg)
+![portfolio idea 1](../IMG_1380.jpg)
 
 Goal:
 -3D elements are novel in web development, demonstrate my skills to employers alongside my other work
