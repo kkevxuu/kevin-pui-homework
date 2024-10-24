@@ -5,12 +5,11 @@
 
 
 # FP1 - Proposal for Critique
-![IMG_1381](https://github.com/user-attachments/assets/2b4d0ec1-b32a-400b-bf08-a998d16b8285)
 
 Idea 1:
 Three.JS focused interactive portfolio
 
-![portfolio idea 1](kevin-pui-homework/final-project/IMG_1380.jpeg)
+![IMG_1380](https://github.com/user-attachments/assets/e28101f9-3c6e-49dd-ad95-159ba65e9b33)
 
 Goal:
 -3D elements are novel in web development, demonstrate my skills to employers alongside my other work
@@ -31,7 +30,7 @@ Concerns:
 Idea 2: 
 Animation focused interactive portfolio
 
-![portfolio idea 2](kevin-pui-homework/final-project/IMG_1381.jpeg)
+![IMG_1381](https://github.com/user-attachments/assets/a899da81-8db2-4507-9e48-f46cf247f1e8)
 
 Goal:
 -Demonstrate my abilities by creating a website with animations that enhances the browsing experience, parallax scrolling
@@ -49,7 +48,7 @@ Concerns:
 Idea 3:
 Generative tree loading/landing page
 
-![portfolio idea 3](kevin-pui-homework/final-project/IMG_1382.jpeg)
+![IMG_1382](https://github.com/user-attachments/assets/f8abb7de-ef31-48d5-9913-9cebd18c324d)
 
 Goal:
 -Create something that is intriguing to interact with, not necessarily relating to my portfolio
