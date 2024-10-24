@@ -5,6 +5,7 @@
 
 
 # FP1 - Proposal for Critique
+![IMG_1381](https://github.com/user-attachments/assets/2b4d0ec1-b32a-400b-bf08-a998d16b8285)
 
 Idea 1:
 Three.JS focused interactive portfolio
