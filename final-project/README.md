@@ -9,7 +9,7 @@
 Idea 1:
 Three.JS focused interactive portfolio
 
-![portfolio idea 1](../IMG_1380.jpg)
+![portfolio idea 1](kevin-pui-homework/final-project/IMG_1380.jpeg)
 
 Goal:
 -3D elements are novel in web development, demonstrate my skills to employers alongside my other work
@@ -30,7 +30,7 @@ Concerns:
 Idea 2: 
 Animation focused interactive portfolio
 
-![portfolio idea 2](IMG_1381.jpg)
+![portfolio idea 2](kevin-pui-homework/final-project/IMG_1381.jpeg)
 
 Goal:
 -Demonstrate my abilities by creating a website with animations that enhances the browsing experience, parallax scrolling
@@ -48,7 +48,7 @@ Concerns:
 Idea 3:
 Generative tree loading/landing page
 
-![portfolio idea 3](IMG_1382.jpg)
+![portfolio idea 3](kevin-pui-homework/final-project/IMG_1382.jpeg)
 
 Goal:
 -Create something that is intriguing to interact with, not necessarily relating to my portfolio
