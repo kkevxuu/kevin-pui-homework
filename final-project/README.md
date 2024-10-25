@@ -1,10 +1,6 @@
-<mark>**Note that this document order from FP4 -> FP1**</mark>
+Markdown syntax: https://www.markdownguide.org/cheat-sheet/ 
 
-# **FP4 \- Final Project Writeup**
-
-Feel free to refer to this [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) to make your writeup more organized, and you can preview your markdown file in VSCode [Markdown editing with Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview). 
-
-Please sign up for the study at [https://tinyurl.com/pui-study](https://tinyurl.com/pui-study) to allow us to use your submission to create a better GenAI assistant for designers!
+# **FP4 \- Final Project Writeup - Kevin Xu**
 
 ## Part 1: Website Description
 
@@ -172,90 +168,92 @@ How would you use Generative AI responsibly?
 
 ## Idea Sketches
 
-### *Idea 1*
+### *Idea 1: 3D focused interactive portfolio*
 
-![title for sketch1](images/sketch1.png)
+![sketch 1](images/ideaSketch1.jpeg)
 
-Add a few sentences about your design. Briefly state the motivation of each project idea. Example questions to answer:
+* Goal/basic idea description:
 
-* What is the basic idea of your final project? (1-2 sentences)  
-* How do you plan to make your design interactive and engaging?  
-* How do you plan to make your design accessible?  
-* What information do you specifically want to convey and include on your website?
+For my first idea, I would like to make a unique portfolio featuring a 3D model which the user can interact with to navigate to the different projects I created over the years. 3D elements are somewhat novel in web development, and I want to demonstrate my coding skills through this website to employers alongside my design work. 
 
-### *Idea 2*
+* How it will be interactive/engaging: 
 
-…
+The 3D elements promote engagement and spark curiosity, making my website stand out from others. It also will showcase my work in a cool non-linear way, which I like. This 3D element will likely be on the main navigation page, and transitions with an animation into each project detail page. 
 
-### *Idea 3*
+* Plans for accessibility:
 
-…
+I want my design to be bold and experimental while still being usable and accessible. I am a bit concerned about this complex website eorking on different platforms, especially how the website would work on a mobile device, being primarily designed for viewing on a computer. I will try to look for libraries that are compatiable. 
+
+* Tools:
+Three.JS
+Solidworks or Blender for the CAD model
+Javascript/CSS/HTML
+
+### *Idea 2: animation focused interactive portfolio*
+
+![sketch 2](images/ideaSketch2.jpeg)
+
+* Goal/basic idea description:
+
+I would also like to try creating a website built around unique animations and parallax scrolling, vertical or horizontal. I'm intrigued by unique interactions this could bring, as websites are commonly 2D and vertical scrolling. Parallax effect can add depth and horizontal scrolling of my main page can be something that the user discovers naturally. I also want to try to support clicking and dragging the images to navigate, for a more realistic and tactile feel. 
+
+* How it will be interactive/engaging: 
+
+Besides the unique navigation page, for my content pages, I want to incorporate a unique cursor that interacts with the content and also cool animated loading effects. These are secondary goals, however. The main focus is on building a navigation that prioritizes UX, and feels tactile and three-timensional. 
+
+* Plans for accessibility:
+There is a possibility that I will make an alternative vertical scrolling website for mobile interfaces using media queries.
+
+
+* Tools:
+GSAP/Parallax.JS/Motion One
+Javascipt/CSS/HTML
+
+### *Idea 3: generative tree refresh/website landing page*
+
+![sketch 3](images/ideaSketch3.jpeg)
+
+* Goal/basic idea description:
+
+I want to create a landing page or refresh screen for my portfolio that is intriguing to interact with. It will have the ability to generate a new tree structure on every refresh, or when a certain button is clicked, to give a sense of an experience that is unique to every visitor of my website. I can stimulate the "generation" by revealing the finished structure slowly, like a fake loading screen. 
+
+
+* How it will be interactive/engaging: 
+
+The tree structure will be different every time it is generated. I will look into the generation of random tree structures and perhaps impleent it through 2D geometric elements, or use Three.JS if it is not too diffficult. 
+
+* Plans for accessibility:
+
+I have never written generative code, so that is what I'm mostly concerned about. This feature will not affect the usability or accessibility of my other webpages as it is merely a landing page, but I will be sure to implement it for different browser sizes. 
+
+
+* Tools:
+Three.JS
+Javascript/CSS/HTML
 
 ## Feedback Summary
 
 Summarize all the critiques you received during the lab session (\~300 words). 
 
+1. Acheive the basics. I should aim to acheive a MVP or minimum viable product first, and then implement other features if I have time.  I need to identify the must-have features of my website, and the "good-to-haves". 
+
+2. Vertical scrolling. People generally preferred my second idea with the horizontal parallax scrolling on the main page, however they preferred a vertical scrolling orientation for the project detail page. 
+
+3. Accessibility. Keyboard accessibility was brought up for the second idea, not only should people be able to scroll with a mouse or trackpad, but it needs to work with the up-down-left-right arrow keys as well. 
+
+4. Hints. A visual cue or suggestion such as a progress bar could be added to my horizontal scroll navigation page, to give people a hint of the website being horizonal scroll.
+
+5. Infinite scrolling. I can fully embrace the uniqueness of the horizontal scroll if I made it loop and endless, so that instead of scrolling back to where they were, they can continue scrolling and see the same projects again. 
+
+6. More interactions. My projects can become slightly bigger when they are "selected" as users pan through my navigation. This will add a level of assurance and make the interface feel more responsive and interactive. 
+
 ## Feedback Digestion
 
 Digest the feedback you got in the lab (\~300 words). Indicate which critique you will act on in your next design and why you chose to incorporate/dismiss pieces of critique.
 
+The feedback session was extremely helpful. People brought up valuable suggestions and ideas that I would not have considered otherwise, and I am so grateful to now have a clear direction of where I'm headed, and what to keep in mind! I have decided to go with my second idea, of creating a personal portfolio website with an animation focus. It will have a horizontal parallax scroll navigation page, and project description pages with subtle animations. 
+
+I think all the critique I received was valid, and I will try to incorporate all of them, time permitting. My favorite pieces of advice were to acheive a MVP first, so that I am not stuck obsessing over a certain feature and neglecting to make progress on my overall project, and also to include a progress bar in the navigation page to hint at the horizontal scrolling. I believe that subtle details and hints like the progress bar are what make the UX experience so seamless and special, and very glad that this is brought to my attention as I forgot to consider it entirely! I will be sure to get more feedback after my prototype is created, and continue to improve the UX experience. Having a unique feature like horizontal scroll is making me very excited about all the associated possibilities and novel UX solutions I will need to come up with. 
 
 
-
-
-Idea 1:
-Three.JS focused interactive portfolio
-
-![IMG_1380](https://github.com/user-attachments/assets/e28101f9-3c6e-49dd-ad95-159ba65e9b33)
-
-Goal:
--3D elements are novel in web development, demonstrate my skills to employers alongside my other work
--Promotes engagement and curiosity
--Showcases my work in a better non-linear way, which I like
-Features:
--A main navigation page that has a 3D CAD model that represents my work and is interactive
--Transition animations into each page
--Good UX while being bold & experimental 
-Tools:
--Three.JS
--Solidworks or Blender for the CAD model
--Javascript/CSS/HTML
-Concerns:
--Website must be operable on two browser sizes, and be accessible. How do I achieve this with three.JS?
--The formats Three.JS supports and the associated complexities
-
-Idea 2: 
-Animation focused interactive portfolio
-
-![IMG_1381](https://github.com/user-attachments/assets/a899da81-8db2-4507-9e48-f46cf247f1e8)
-
-Goal:
--Demonstrate my abilities by creating a website with animations that enhances the browsing experience, parallax scrolling
--Experiment with clicking & dragging, mouse tracking
-
-Features:
--Navigation page as pannable animation that the user can either scroll, or use a more novel technique and “flip through”
--Unique cursor on content pages
-Tools:
--libraries like GSAP, Motion One etc
--Javascript/CSS/HTML
-Concerns:
--Accessibility and aspect ratios, especially on mobile. Do I have to build two websites?
-
-Idea 3:
-Generative tree loading/landing page
-
-![IMG_1382](https://github.com/user-attachments/assets/f8abb7de-ef31-48d5-9913-9cebd18c324d)
-
-Goal:
--Create something that is intriguing to interact with, not necessarily relating to my portfolio
-Features:
--A landing page to my portfolio that has the ability to generate a new tree structure on every refresh or when button is clicked
--The tree structure can be revealed slowly, like a fake loading screen
-Tools:
--GSAP and MotionOne animations for the content pages
--Javascript/CSS/HTML
-Concerns:
--I’ve never written generative code
--Making the tree aesthetic, wondering if it would work with Three.JS elements? Perhaps keep it 2D if too complex
 
