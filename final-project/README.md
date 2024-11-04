@@ -89,80 +89,147 @@ Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-gener
 
 ## Project Description
 
-Briefly restate your motivation and a short description of your project.
+I plan to create a personal portfolio website featuring a horizontal scrolling parallax effect on the main navigation page, and also implement animations using libraries on my project pages. 
 
 ## High-Fi Prototypes
 
 ### *Prototype 1*
 
-![title for prototype1](images/prototype1.png)
+![proto1](./images/proto1.png)
 
-A brief description and summary of the user feedback (\<100 words, 2 images) 
+![proto1](./images/p2.png)
+
+![proto1](./images/p3.png)
+
+![proto1](./images/p4.png)
+
+Testing procedure:
+
+-How the test was conducted
+
+The participants were given a task using the functional prototype. They were asked to use the site to view the chair project, check out the details, and then find the resume. They are then given 1 minute to freely explore the site and give suggestions on the fluidity of navigation. 
+
+-What information was given to participant?
+
+The participants were not given any information other than the above. They are to navigate the site purely based on visual cue and their innate logic. 
+
+-What tasks did they perform?
+
+Viewing project + finding resume
+
+-What were the results?
+
+Users reported a few things:
+
+Organization of the mainpage was clear, but could use visual cue to locate themselves within the projects
+
+The project page was tedious to scroll through, likely due to the length of the page. Make images smaller
+
+They liked the persistent “Work” and “About” sections in the website, making it easy to navigate
+
+Should add a back to top button at the end of each page
+	
+-Other general feedback?
+
+User likes the simplicity and subtle features that enhance the UX, like clicking logo returns them to main page, and highlighting the “work” and “about” based on where you are located. They do think the website feels a bit static and could use more interactivity, which is understandable as this is still a prototype. 
+
 
 ### *Prototype 2*
 
-…
+![proto1](./images/proto2.png)
+
+For prototype two, the same testing procedure was followed. The main page has a different design but the rest of the website was the same. Users commonly mentioned that the vertical scrolling was not as intriguing as the horizontal, and that if the progress bar for the horizontal bar was implemented, it would be as intuitive as a traditional vertical scrolling website. I decided to pursue prototype 1. 
 
 ## Usability Test
 
-Discuss the user feedback you got during the evaluation / usability test (\~300 words). Indicate which feedback you implemented, inspired new directions, or otherwise influenced your final design. 
+Based on user feedback, which was mostly about how more visual hints could be given to enhance the usability, I made a few changes:
+
+Abandoned prototype 2 as the horizontal scroll feels quite intuitive based on their feedback, and this solution lacks uniqueness
+
+Total length of pages reduced, pace of scrolling adjusted
+
+Increased projects shown on main page to hint at scrolling as some are always partially concealed
+
+Added dynamic progress bar that shows your position in a subtle way and makes website more interactive 
+
+Added same progress bar to each individual project page
+
+
+No changes made to profile "about" page, user liked straightforwardness of how the information was presented
 
 ## Updated Designs
 
-Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
+![proto1](./images/p5.png)
+
+Improved user flow and reduced page length to make scrolling feel less tedious. The images shown previously of prototype 1 are of the updated design, with user suggestions already applied. 
 
 ## Feedback Summary
 
-Summarize the feedback you received in the lab session and discuss how it influenced your design (\~300 words). 
+During lab, I received similar feedback to my user studies, which hinted that the things people brought up during the user testing were valid concerns. I think the biggest change that I made to my website based on all the feedback was the scroll bar - a simple design like the scrollbar added much more interactivity and usability to my website, as the user now has the ability to click and drag on the scroll bar - which is something they are more familiar with. When I implement unique features like horizontal scroll, it is important to remember that features like this are not what users are typically used to, and so it is important to include other indicators. Otherwise, in the lab session, the feedback for my project was mostly positive and I am excited to keep working. 
 
 ## Milestones
 
-Outline weekly milestones to plan your expected implementation progress until the end of the semester (\~300 words). 
+For the next 4 weeks, I have a structured plan to get this project completed.
+
+Week 1:
+
+Mostly research and deciding on which libraries to use. The horizontal scrolling can be done with many different libraries, or done in vanilla JS or vanilla CSS so there are tons of options to look into.
+
+Week 2:
+
+Completed the basic HTML and CSS website. I aim to have the MVP done at this time and begin to implement the basic animations using a library for the individual project pages.
+
+Week 3:
+
+Implement and mostly completed the website. At this stage, I aim to have users test the almost complete website to give me direction on what to work on next.
+
+Week 4:
+
+Website complete/polishing. For the last week I will be mostly working on polishing the website and making sure that the finished result has a completed and satisfying feel. Mostly adjusting font size, image size, and getting the website to work well on different screen sizes using media query. 
 
 ### *Implementation Plan*
 
-- [ ] Week 9 Oct 28 \- Nov 1:
+- [X] Week 9 Oct 28 \- Nov 1:
   - [X] FP1 due
-  - [ ] ...
+  - [X] Create prototypes and perform user testing
   
-- [ ] Week 10 Nov 4 \- Nov 8:   
-  - [ ] FP2 due
+- [] Week 10 Nov 4 \- Nov 8:   
+  - [X] FP2 due
+  - [X] Begin research and starting the HTML/CSS
 
-- [ ] Week 11 Nov 11 \- Nov 15:  
-- [ ] Week 12 Nov 18 \- Nov 22:   
-- [ ] Week 13 Nov 25 \- Nov 29:  
-
-  - [ ] Thanksgiving  
-- [ ] Week 14 Dec 2 \- Dec 6:  
-  - [ ] FP4 due 
+- [] Week 11 Nov 11 \- Nov 15:  
+  - [] Complete the basic HTML and CSS website and work towards finishing MVP
+  - [] Implement basic animations
+  
+- [] Week 12 Nov 18 \- Nov 22:   
+  - [] Begin on finishing the parallax horizontal scrolling page
+- [] Week 13 Nov 25 \- Nov 29:  
+  - [] Continue to work on the website, aim to start polishing
+  - [] Thanksgiving  
+- [] Week 14 Dec 2 \- Dec 6:  
+  - [] FP4 due 
 
 ### *Libraries and Other Components*
 
 List the JS libraries and other components (if applicable) that you plan to use. 
-* 
 
+Parallax.JS, GSAP, ScrollTrigger OR just vanilla JS/CSS for the main page, will decide based on performance 
+
+MotionOne for animations
 
 ## Generative AI Use Plan
 
-Outline how you plan to use Generative AI tools to aid in the implementation (\~300 words).
+I will definitely be asking AI questions to along the way help with the implementation. I will mostly be sticking to asking questions for the purpose of explaining; ie "What does this code do" and "Why is X used instead of Y" type questions. I don't think I will be using code generated by AI though, as there are much better resources online like library documentations and youtube. I would much rather use those resources instead of AI, as AI always has the probability of making mistakes. 
 
 ### *Tool Use*
 
- What would you use? Edit the list given your plan. For each tool, explain briefly on what do you expect Generative AI to help you with and what might it not be able to help you with.
-
-* ChatGPT  
-  * I will use it for … because it can help me …  
-  * I will not use it for … because it might not be able to help me with …   
-* Gemini  
-* Copilot  
-* V0
-* ...
+ChatGPT: for asking questions to help me understand code. Like mentioned before, I wil not be using code generated by ChatGPT, rather only using it to help me quickly understand something, the same way I would use a google search. 
 
 ### *Responsible Use*
 
 How would you use Generative AI responsibly? 
 
----
+I believe my use case is pretty responsible as I am not asking it to generate me code. If I ever find a solution with the help of AI, I will definitely cite it. However in my case that is pretty unlikely to happen. 
 
 # **FP1 \- Proposal for Critique**
 
