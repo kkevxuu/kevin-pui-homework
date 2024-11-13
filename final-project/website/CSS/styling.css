@@ -5,20 +5,19 @@ a {
   font-size: 20px;
 }
 
-
-
-
-
-
-
-
-body {
+.bodyp1 {
   height: 100vh;
   width: 100vw;
   background-color: rgb(255, 255, 255);
   margin: 0rem;
   overflow: hidden;
    /*font-family: ibm plex sans how to import*/
+}
+
+
+.bodyp2 {
+  background-color: grey;
+  
 }
 
 #image-track {
