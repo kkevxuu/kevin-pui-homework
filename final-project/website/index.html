@@ -6,47 +6,24 @@
         <link rel="stylesheet" type="text/css" href="CSS/styling.css">
     </head>
     <body>
-        <!--
-        <h1 class = "logo">
-            Xu
-        </h1>
-        <h2 class = "workmenu">
-            Work
-        </h2>
-        <h2 class = "aboutmenu">
-            About
-        </h2>
-    -->
-        <div id = "image-track"> <!--contains individual images-->
-            <img src = "./assets/casting.jpg" alt = "">
-            <img src = "./assets/chair.jpg" alt = "">
-            <img src = "./assets/machine.jpg" alt = "">
-            <img src = "./assets/sensingdevice.jpg" alt = "">
-            <img src = "./assets/woodmodels.jpg" alt = "">
-        </div>
         
-        
-
-
-    <!--
-        <div class = "card" id = "card-1">
-            <img src = "./assets/casting.jpg" alt = "">
-        </div>
-        <div class = "card" id = "card-1">
-            <img src = "./assets/chair.jpg" alt = "">
-        </div>
-        <div class = "card" id = "card-1">
-            <img src = "./assets/machine.jpg" alt = "">
-        </div>
-        <div class = "card" id = "card-1">
-            <img src = "./assets/sensingdevice.jpg" alt = "">
-        </div>
-        <div class = "card" id = "card-1">
-            <img src = "./assets/woodmodels.jpg" alt = "">
-        </div>
-
-    -->
-
+            <nav>
+                <a href=index.html class="logolink">Xu</a>
+                <a href=index.html class="worklink">Work</a>
+                <a href=aboutpage.html class="aboutlink">About</a>
+            </nav>
+            
+            <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                <img class="image" src=./assets/casting.jpg alt = "" draggable="false" />
+                <img class="image" src=./assets/chair.jpg alt = "" draggable="false" />
+                <img class="image" src=./assets/machine.jpg alt = "" draggable="false" />
+                <img class="image" src=./assets/sensingdevice.jpg alt = "" draggable="false" />
+                <img class="image" src=./assets/woodmodels.jpg alt = "" draggable="false" />
+            </div>
+                
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
 
