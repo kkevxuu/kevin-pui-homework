@@ -38,3 +38,22 @@ body {
   object-position: 100% center;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  padding: 1em; /* font size based sizing*/
+  width: 90%;
+  display: flex;
+  justify-content: right;
+}
+
+.logolinkbox{
+  justify-content: left;
+  padding: 30px;
+  padding-right: 1300px;
+}
+
+.navbox{
+  padding: 30px;
+
+}

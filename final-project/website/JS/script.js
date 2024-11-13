@@ -54,7 +54,7 @@ const handleScroll = (delta) => {
 
 // Scroll Wheel Event
 window.addEventListener("wheel", (e) => {
-  const delta = e.deltaY > 0 ? -4 : 4; // Adjust speed as needed
+  const delta = e.deltaY > 0 ? -4 : 4; // Adjust speed here
   handleScroll(delta);
 });
 
@@ -69,7 +69,7 @@ window.addEventListener("keydown", (e) => {
 
 
 
-/* -- Had to add extra lines for touch events -- */
+/* --  for touch events -- */
 
 window.onmousedown = e => handleOnDown(e);
 
