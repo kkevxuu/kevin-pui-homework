@@ -1,89 +1,84 @@
 const track = document.getElementById("image-track");
 
-const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+// Ensure GSAP sets the initial position correctly
+gsap.set(track, { xPercent: -23 }); // Initial scroll position at -23%
+track.dataset.percentage = -23; // Starting value for the dataset
 
-const handleOnUp = () => {
-  track.dataset.mouseDownAt = "0";  
-  track.dataset.prevPercentage = track.dataset.percentage;
-}
-
-const handleOnMove = e => {
-  if(track.dataset.mouseDownAt === "0") return;
-  
-  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-        maxDelta = window.innerWidth / 2;
-  
-  const percentage = (mouseDelta / maxDelta) * -100,
-        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-  
+// Function to update the track's position
+const updateTrackPosition = (nextPercentage) => {
+  // Update the dataset value and animate the track with GSAP
   track.dataset.percentage = nextPercentage;
-  
-  track.animate({
-    transform: `translate(${nextPercentage}%, -50%)`
-  }, { duration: 1200, fill: "forwards" });
-  
-  for(const image of track.getElementsByClassName("image")) {
-    image.animate({
-      objectPosition: `${100 + nextPercentage}% center`
-    }, { duration: 1200, fill: "forwards" });
-  }
-}
-
-
-
-
-/* -- Scroll Wheel and Arrow Key Functionality -- */
-
-const handleScroll = (delta) => {
-  const prevPercentage = parseFloat(track.dataset.percentage) || 0;
-  const nextPercentage = Math.max(Math.min(prevPercentage + delta, 0), -100);
-
-  track.dataset.percentage = nextPercentage;
-  
-  track.animate({
-    transform: `translate(${nextPercentage}%, -50%)`
-  }, { duration: 600, fill: "forwards" });
-
-  for(const image of track.getElementsByClassName("image")) {
-    image.animate({
-      objectPosition: `${100 + nextPercentage}% center`
-    }, { duration: 600, fill: "forwards" });
-  }
+  gsap.to(track, { duration: 1.5, xPercent: nextPercentage, ease: "power3.out" });
+  gsap.to(track.querySelectorAll(".image"), {
+    duration: 1.5,
+    objectPosition: `${100 + nextPercentage * 1}% center`, // Adjust parallax effect
+    ease: "power3.out"
+  });
 };
 
-// Scroll Wheel Event
+// Scroll handler function
+const handleScroll = (delta) => {
+  // Calculate the next percentage and ensure it's within the defined limits (-23 to -77)
+  const nextPercentage = Math.max(
+    Math.min(parseFloat(track.dataset.percentage) + delta, -23), // Upper limit
+    -77 // Lower limit
+  );
+  updateTrackPosition(nextPercentage);
+};
+
+//wheel event listener with a controlled delta for smooth scrolling
 window.addEventListener("wheel", (e) => {
-  const delta = e.deltaY > 0 ? -4 : 4; // Adjust speed here
-  handleScroll(delta);
+  // Adjust the delta values (-2, 2) for scrolling speed
+  handleScroll(e.deltaY > 0 ? -2 : 2);
 });
 
-// Arrow Key Event
+//keydown event listener for arrow keys to control scrolling
 window.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowRight") handleScroll(-5); // Right arrow scrolls right
-  if (e.key === "ArrowLeft") handleScroll(5);   // Left arrow scrolls left
-  if (e.key === "ArrowUp") handleScroll(5); //Up arrow scrolls left
-  if (e.key === "ArrowDown") handleScroll(-5); //Down arrow scrolls right
+  const delta = { ArrowRight: -7, ArrowLeft: 7, ArrowUp: 7, ArrowDown: -7 }[e.key];
+  if (delta) handleScroll(delta);
+});
+
+// Prevent images from being dragged
+document.querySelectorAll('.logolink').forEach(link => link.ondragstart = () => false);
+
+//an initial call to `updateTrackPosition` to confirm the starting position
+updateTrackPosition(-23);
+
+
+/* prevent zoom */
+
+document.addEventListener('wheel', function(e) {
+  if (e.ctrlKey) {
+    e.preventDefault(); // Prevents zooming with Ctrl + scroll
+  }
+}, { passive: false });
+
+document.addEventListener('gesturestart', function(e) {
+  e.preventDefault(); //Prevents pinch-to-zoom gestures
+});
+
+
+
+/* back to top button*/
+
+// Add scroll-to-top functionality
+document.getElementById('back-to-top').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' //Smooth scrolling to the top
+  });
 });
 
 
 
 
-/* --  for touch events -- */
-
-window.onmousedown = e => handleOnDown(e);
-
-window.ontouchstart = e => handleOnDown(e.touches[0]);
-
-window.onmouseup = e => handleOnUp(e);
-
-window.ontouchend = e => handleOnUp(e.touches[0]);
-
-window.onmousemove = e => handleOnMove(e);
-
-window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 
-
-
-
+document.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
+  
+  const indicator = document.getElementById("scroll-indicator");
+  indicator.textContent = `${scrollPercent}%`;
+});
