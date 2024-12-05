@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Crane Chair</title>
+        <title>Casting</title>
         <link rel="stylesheet" type="text/css" href="CSS/styling.css">
-       <!--for google font ibm plex-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/split-type"></script>
     </head>
 
     <body class="bodyp2">
@@ -26,43 +26,51 @@
                 </div>
             </div>
         </nav>
+        <!--Project Information-->
         <div class="titlebox">
-            <h1 class="projecttitle">Crane Chairs</h1>
+            <h1 class="projecttitle">Plaster Casting</h1>
         </div>
         <div class="projectinfobox">
             <div class="descriptionbox1">
                 <h2>Why</h2>
                 <p>
-                    Many written Chinese characters are derived from the shape and form of objects. This concept of deriving form from rhythm, flow, and movement inspired me to design pieces of furniture that brings this idea into everyday life. This chair project encapsulates the essence of the traditional Crane Dance: a dance performed by the Chaoxian (Korean) ethnic minority group in China that mimics Cranes and their movement during flight.
+                    This project explored the ways 2D curves can be translated into 3D, and how these forms can interact with light. 
                 </p>
             </div>
             <div class="descriptionbox2">
                 <h2>What</h2>
                 <p>
-                    By studying the dance and quickly sketching down the forms of dancers in paused snapshots, I was able to gather around 30 movements on a sheet of paper. I would then simplify the lines and eliminate a few variations of the samples. These chairs directly mimic the movement of the dancers; I created a quarter scale final model and further refined the materiality, mimicking dark oak for a traditional touch and incorporating rope instead of traditional cushioning to add lightness visually.
+                    After familiarizing myself with a seashell, I carved out a 3D unit representing the shell using foam, which will later form a pattern. This was then used to create the mold. Finally, the individual plaster pieces were cast and I explored how light can manipulate the pattern.
                 </p>
             </div>
             <div class="descriptionbox3">
                 <h2>How </h2>
                 <p>
-                    The CAD models were made with Rhinoceros 3D, and the quarter scale physical model featured stacking and sanding laser cut MDF, painting, and weaving. 
+                    High density foam was used for carving the initial unit used to create the mold. Silicone mold maker and plaster were used to cast the individual 36 pieces. Sandpaper was also used for a smooth finish. 
                 </p>
             </div>
         </div>
         <hr>
-        <!--Images-->
-        <img class="projectimage"src="./assets/chair.jpg" alt="">
 
-        <div class="image-grid">
-            <img src="./assets/Pui Website Images/Chair/1.jpg" alt="">
-            <img src="./assets/Pui Website Images/Chair/2.jpg" alt="">
-          </div>
+        <!--Images-->
+        <img class="projectimage"src="./assets/Pui Website Images/Casting/1.jpg" alt="">
+        <img class="projectimage"src="./assets/Pui Website Images/Casting/2.jpg" alt="">
+        <img class="projectimage"src="./assets/Pui Website Images/Casting/3.jpg" alt="">
+        <img class="projectimage"src="./assets/Pui Website Images/Casting/4.jpg" alt="">
+        <video class="projectimage" controls>
+            <source src="./assets/Pui Website Images/Casting/casting video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
           
+
+
         <div class="footer">
             <button id="back-to-top" aria-label="Back to Top">^</button>
         </div>
-        <div id="scroll-indicator">0%</div>
-        <script src="js/script.js"></script>
+        <div id="scroll-indicator">0</div>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="js/script2.js"></script>
     </body>
 </html>
 

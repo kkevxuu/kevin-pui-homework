@@ -1,12 +1,12 @@
 const track = document.getElementById("image-track");
 
-// Ensure GSAP sets the initial position correctly
+//so GSAP sets the initial position correctly
 gsap.set(track, { xPercent: -23 }); // Initial scroll position at -23%
-track.dataset.percentage = -23; // Starting value for the dataset
+track.dataset.percentage = -23; //starting value for the dataset
 
 // Function to update the track's position
 const updateTrackPosition = (nextPercentage) => {
-  // Update the dataset value and animate the track with GSAP
+  // Updating the dataset value and animate the track with GSAP
   track.dataset.percentage = nextPercentage;
   gsap.to(track, { duration: 1.5, xPercent: nextPercentage, ease: "power3.out" });
   gsap.to(track.querySelectorAll(".image"), {
@@ -15,6 +15,8 @@ const updateTrackPosition = (nextPercentage) => {
     ease: "power3.out"
   });
 };
+
+
 
 // Scroll handler function
 const handleScroll = (delta) => {
@@ -38,11 +40,23 @@ window.addEventListener("keydown", (e) => {
   if (delta) handleScroll(delta);
 });
 
+
+
+
+
+
+
 // Prevent images from being dragged
 document.querySelectorAll('.logolink').forEach(link => link.ondragstart = () => false);
 
 //an initial call to `updateTrackPosition` to confirm the starting position
 updateTrackPosition(-23);
+
+
+
+
+
+
 
 
 /* prevent zoom */
@@ -57,28 +71,3 @@ document.addEventListener('gesturestart', function(e) {
   e.preventDefault(); //Prevents pinch-to-zoom gestures
 });
 
-
-
-/* back to top button*/
-
-// Add scroll-to-top functionality
-document.getElementById('back-to-top').addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth' //Smooth scrolling to the top
-  });
-});
-
-
-
-
-
-
-document.addEventListener("scroll", () => {
-  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrollPercent = Math.round((scrollTop / scrollHeight) * 100);
-  
-  const indicator = document.getElementById("scroll-indicator");
-  indicator.textContent = `${scrollPercent}%`;
-});

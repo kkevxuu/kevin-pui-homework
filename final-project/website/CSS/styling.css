@@ -26,6 +26,7 @@
   top: 50%;
   transform: translate(0%, -50%); 
   user-select: none; /* -- Prevent image highlighting -- */
+
 }
 
 .image {
@@ -35,6 +36,7 @@
   object-position: 100% center;
   user-select: none;
 }
+
 
 
 /* NAVIGATION*/
@@ -152,26 +154,51 @@ nav a.active {
   width: 59.5%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 5vh;
 }
 
 
-/* 2 wide image grid */
-
+/*IMAGE GRID */
 .image-grid {
-  display: flex;
-  justify-content: space-between; /* Ensures consistent space between images */
-  width: 59.5%; /* Set a specific width for the grid */
-  margin: 0 auto; /* Centers the grid within the page */
-  gap: 1vw; /* Space between the images */
-  padding: 1vw; /* Adds space around the grid */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates a 1x2 grid */
+  grid-gap: 0.5vw; /* Adaptive space between images */
+  width: 59.5%; /* Fixed grid width */
+  margin: 0 auto; /* Center the grid */
+
+  margin-bottom: 5vh;
 }
 
 .image-grid img {
-  width: 49%; /* Allows images to resize based on the container */
-  max-height: 100%; /* Maintains aspect ratio and scales with container height */
-  height: auto; /* Keeps the natural aspect ratio */
+  width: 100%; /* Make images fill their grid cell */
+  height: 100%; /* Make images take up the full height of the grid cell */
+  object-fit: cover; /* Ensures images scale and crop as needed to fill the grid cell */
   display: block; /* Removes unwanted bottom space */
+  align-self: center; /* Aligns images vertically within their cell */
 }
+/* Additional wrapper to control overall grid height */
+.image-grid-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width of the container */
+  height: auto; /* Height adapts to content */
+  overflow: hidden; /* Prevents overflow issues */
+}
+
+/* Adjust grid to only show 1 or 2 columns depending on the number of images */
+@media (max-width: 900px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); /* For 1-2 images */
+  }
+}
+
+@media (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: 1fr; /* For 1 image */
+  }
+}
+
 
 
 
@@ -226,10 +253,14 @@ hr{
 .introduction{
 
 }
-.introductiontext{
+.introductiontext1, .introductiontext2{
   font-size: 24px;
   font-weight: 400;
 }
+
+
+
+
 .details{
   margin-top: 5vh;
   display: flex;
@@ -247,7 +278,7 @@ hr{
 }
 
 .skills{
-
+  padding-right: 3%;
 }
 
 .skills h3{
@@ -261,7 +292,8 @@ hr{
 }
 
 .activities{
-
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .activities h3{
@@ -275,7 +307,7 @@ hr{
 }
 
 .contact{
-
+  padding-left: 3%;
 }
 
 .contact h3{
@@ -295,6 +327,28 @@ hr{
 .contact p a:visited{
   color: black;
 }
+
+
+@media (max-width: 1100px) {
+  .details {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .skills, .activities, .contact{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .activities{
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  .contact{
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
+
 
 
 /*hide scrollbar*/
@@ -319,32 +373,33 @@ hr{
 
 /* Styling for the footer */
 .footer {
-  text-align: center; /* Centers the button */
-  margin-top: 20px;
-  padding: 20px 0;
+  text-align: center; 
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+
 }
 
-/* Styling for the back-to-top button */
+/* Styling button */
 #back-to-top {
-  font-size: 24px; /* Size of the symbol */
-  font-weight: bold; /* Makes it bold */
+  font-size: 60px; /* Size of the symbol */
+  font-weight: 700; /* Makes it bold */
   background-color: transparent; /* No background */
   border: none; /* Removes border */
   cursor: pointer; /* Pointer cursor on hover */
 }
 
-
+/*percentage scroll*/
 
 #scroll-indicator {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 5px 10px;
+  bottom: 5vw;
+  right: 5vw;
+  color: black;
   border-radius: 5px;
   font-size: 14px;
+  font-weight:400;
   font-family: Arial, sans-serif;
   z-index: 1000;
   pointer-events: none;
+  font-size: 24px;
 }
