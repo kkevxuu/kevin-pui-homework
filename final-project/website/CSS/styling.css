@@ -162,7 +162,7 @@ nav a.active {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Creates a 1x2 grid */
-  grid-gap: 0.5vw; /* Adaptive space between images */
+  grid-gap: 0.1vw; /* Adaptive space between images */
   width: 59.5%; /* Fixed grid width */
   margin: 0 auto; /* Center the grid */
 
@@ -382,7 +382,7 @@ hr{
 /* Styling button */
 #back-to-top {
   font-size: 60px; /* Size of the symbol */
-  font-weight: 700; /* Makes it bold */
+  font-weight: 400; /* Makes it bold */
   background-color: transparent; /* No background */
   border: none; /* Removes border */
   cursor: pointer; /* Pointer cursor on hover */
@@ -392,7 +392,7 @@ hr{
 
 #scroll-indicator {
   position: fixed;
-  bottom: 5vw;
+  bottom: 8.5vh;
   right: 5vw;
   color: black;
   border-radius: 5px;

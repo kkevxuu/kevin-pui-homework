@@ -1,12 +1,21 @@
 const track = document.getElementById("image-track");
 
-//so GSAP sets the initial position correctly
-gsap.set(track, { xPercent: -23 }); // Initial scroll position at -23%
-track.dataset.percentage = -23; //starting value for the dataset
+// Check if a saved position exists in localStorage
+const savedPosition = localStorage.getItem('trackPosition');
+
+// If a position exists, use it; otherwise, default to -23%
+const initialPosition = savedPosition !== null ? parseFloat(savedPosition) : -23;
+
+// Set the initial position with GSAP
+gsap.set(track, { xPercent: initialPosition });
+track.dataset.percentage = initialPosition;
 
 // Function to update the track's position
 const updateTrackPosition = (nextPercentage) => {
-  // Updating the dataset value and animate the track with GSAP
+  // Store the current position in localStorage
+  localStorage.setItem('trackPosition', nextPercentage);
+
+  // Update the dataset value and animate the track with GSAP
   track.dataset.percentage = nextPercentage;
   gsap.to(track, { duration: 1.5, xPercent: nextPercentage, ease: "power3.out" });
   gsap.to(track.querySelectorAll(".image"), {
@@ -15,8 +24,6 @@ const updateTrackPosition = (nextPercentage) => {
     ease: "power3.out"
   });
 };
-
-
 
 // Scroll handler function
 const handleScroll = (delta) => {
@@ -28,39 +35,24 @@ const handleScroll = (delta) => {
   updateTrackPosition(nextPercentage);
 };
 
-//wheel event listener with a controlled delta for smooth scrolling
+// Wheel event listener with a controlled delta for smooth scrolling
 window.addEventListener("wheel", (e) => {
-  // Adjust the delta values (-2, 2) for scrolling speed
-  handleScroll(e.deltaY > 0 ? -2 : 2);
+  handleScroll(e.deltaY > 0 ? -2 : 2); // Adjust delta values for scrolling speed
 });
 
-//keydown event listener for arrow keys to control scrolling
+// Keydown event listener for arrow keys to control scrolling
 window.addEventListener("keydown", (e) => {
   const delta = { ArrowRight: -7, ArrowLeft: 7, ArrowUp: 7, ArrowDown: -7 }[e.key];
   if (delta) handleScroll(delta);
 });
 
-
-
-
-
-
-
 // Prevent images from being dragged
 document.querySelectorAll('.logolink').forEach(link => link.ondragstart = () => false);
 
-//an initial call to `updateTrackPosition` to confirm the starting position
-updateTrackPosition(-23);
+// Ensure the track starts at the saved or default position
+updateTrackPosition(initialPosition);
 
-
-
-
-
-
-
-
-/* prevent zoom */
-
+// Prevent zoom
 document.addEventListener('wheel', function(e) {
   if (e.ctrlKey) {
     e.preventDefault(); // Prevents zooming with Ctrl + scroll
@@ -68,6 +60,5 @@ document.addEventListener('wheel', function(e) {
 }, { passive: false });
 
 document.addEventListener('gesturestart', function(e) {
-  e.preventDefault(); //Prevents pinch-to-zoom gestures
+  e.preventDefault(); // Prevents pinch-to-zoom gestures
 });
-
