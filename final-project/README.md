@@ -6,53 +6,75 @@ Markdown syntax: https://www.markdownguide.org/cheat-sheet/
 
 Describe your website (300 words).
 
-* What is the purpose of your website?   
+* What is the purpose of your website? 
+
+The purpose of my website was to create a way of showcasing my personal work. I knew from the beginning that my work was meant to be the main focus, and the website should be designed around showcasing and guiding people through my work the best way possible, so it was a very fun experience thinking about usability, constraints, and how to best serve a specific purpose. 
 * Who is the target audience?  
+
+The target audience is a fellow designer who is looking for the "wow-factor". Recruiters in the design industry are familiar with portfolio formats, and I need to deliver on their expectations while still keeping things refreshing and interesting. I wanted to utilize animation libraries to increase interactivity, and include intuitive features that make the whole experience feel seamless and amooth for them. 
 * What information do you convey with your website?   
-* How is it interesting and engaging? 
+
+There is a hierarchy of information on my website. I want to prioritize images of my project, then the textual descriptions of the project. There are also separate pieces of information about myself in the about section, and I was intentional with the hierarchy present there. 
+* How is it interesting and engaging?
+
+-Horizontal scroll + parallax Effect: makes the website unique and fun to use in terms of navigating my works. 
+-Consistent nav menu: with many novel features, the website needs consistency somewhere so that users can easily anchor themselves in the experience. This menu stays consistent so that in case anything goes wrong they can easily recover and get where they need to, and remain engaged in the whole experience.
+-Animated text: adds a level of interactivity because it is activated by scroll and on page load. This gives a feeling of tactility and is also intriguing to watch. 
+-Progress counter: useful information as users can know how far down in the page they are. Used in conjunction with the "back to top" arrow. 
 
 ## Part 2: User Interaction
 
 How a user would interact with your website? For each step, briefly but clearly state the interaction type & how we should reproduce it.
 
-1. Interaction type. Click on X on page Y / scroll on page X, etc.  
-2. 
+1. Users scroll their mouse, trackpad, or press any arrow key to navigate my main menu.
+2. Users click on a picture to view the project.
+3. Users then scroll on their mouse, trackpad, or arrow key to navigate project page, seeing the progress on the bottom right. 
+4. Once at the bottom of the project page, users click the ^ button to go back to top.
+5. At any time, users can choose to go back to the navigation menu by clicking the website logo, or pressing "works" button. It will return them to the place they left off in the navigation menu, which is a subtle detail that makes the experience more seamless, so they don't have to scroll back to the next project. This is done through using localstorage. Users can also click "about" to view information about me.
+6. In the about section, users can click the links to view my linkedin and resume. 
 
 ## Part 3: External Tool
 
 Describe what important external tool you used (JavaScript library, Web API, animations, or other). Following the bulleted list format below, reply to each of the prompts.
 
-1. Name of tool1  
-   * Why did you choose to use it over other alternatives? (2 sentences max)  
-   * How you used it? (2 sentences max)  
-   * What does it add to your website? (2 sentences max)  
-2. Name of tool2
+1. Gsap and scrolltrigger
+   * I chose to use this library because it is the most well-known animation library for web development, and although it is a bit more complex, it is customizable and I needed customizability for the unique parallax effect.
+   * It is used to animate the track based on how far you scroll, and also animate the images accordingly at a different pace for parallax effect.
+   * Ultimately, it adds engagement and delight to my website because the interaction is unique. It also keeps things simple and doesn't distract from my work. 
+2. SplitText library
+   * I chose to use this library because based on my research, it is the go-to for creating text animations that split line-by-line or character-by-character.
+   * It is used to animate the project page and about page texts in my website. I configured the animation timing and also rate of change to find a balance between too much and too little movement. 
+   * It adds interactivity because it is triggered when user scrolls the text into view. 
 
 ## Part 4: Design Iteration
 
 Describe how you iterated on your prototypes, if at all, including any changes you made to your original design while you were implementing your website and the rationale for the changes. (4-8 sentences max)
 
+There were a few changes I made to my original design: I included a image grid system to better present related images in my projects, I removed the click and drag to scroll for the main navigation page because users keep accidentally clicking into the images when they don't want to, and because the feature wasn't being used by users I tested the design on, and finally I replaced the scrollbar idea with a progress indicator because I want to encourage users reaching the bottom of the page (seeing all of my work) and using the back to top button instead of rapidly skipping through. 
+
 ## Part 5: Implementation Challenge
 
 What challenges did you experience in implementing your website? (2-4 sentences max)
+
+Biggest challenge I had to overcome was making the navigation horizontal scroll/parallax effect. I learned a lot of concepts not related to the class in trying to get this to work, and gathered a lot of web-develpment tools experience, and another major challenge was using media query and making the website work for a variety of screen sizes. I was able to accomplish this in the end, with careful use of "vw" and "vh" and "vmin" instead of the usual "%" and "px". 
 
 ## Part 6: Generative AI Use and Reflection
 
 Describe how you used Generative AI tools to create this final project (a page max, \~500 words).
 
 ### ChatGPT Usage
-* It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that …  
-* It did not match my expectations and plan in [FP2](#generative-ai-use-plan) in that …  
-* I critiqued/evaluated the generated suggestions before incorporation by … For example, this tool once suggested … but I modified/rejected the suggestion because …  
-* I accepted the generations when … This tool did/did not influence my final design and implementation plan because … For example, this tool once suggested … and I adjusted my design according to the suggestion because … 
-* The pros and cons of using this Generative AI tool: …
+* It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that I didn't overly rely on chatGPT, instead using it to help me debug and come up with ideas for certain features. ChatGPT was knowledgable in compatiability issues and why certain things wouldn't work so it was very useful and informative when I had questions on why something wasn't working the way it's supposed to. 
+* It did not match my expectations and plan in [FP2](#generative-ai-use-plan) in that I had to sometimes give it not just a section of my code but a lot of other related code just to make it understand the circumstances. Horizontal parallax is a uncommon feature and sometimes just the HTML or just the JS wasn't enough to help it understand what I was doing. 
+* I critiqued/evaluated the generated suggestions before incorporation by not relying on generated suggestions but instead seeing what other web developers were doing and asking chatGPT for help implementing my ideas and debugging/explaining code I don't understand. 
+* I accepted the generations when I could understand the reasoning behind the generations and I verified this is common practice online in documentations. This tool did not influence my final design and implementation plan because I always had a plan of what I wanted to make and my design was set in stone. 
+* The pros and cons of using this Generative AI tool: pros include how knowledgable it is. ChatGPT has definitely come a long way and it gives debugging steps and suggestions with ease. Cons include there are definitely times where it had no idea what it was talking about and those generations obviously wouldn't work. I think that boils down to whether what you're doing is considered common or not. 
 
 ***Usage Experiences by Project Aspects***
 
 | Ratings | design | plan | write code | debug | \_ (other?) |
 | :---- | :---- | :---- | :---- | :---- | :---- |
-| Usage<sup>1</sup> | \[yes/no\] because … | \[yes/no\] because … | \[yes/no\] because … | \[yes/no\] because … | \[yes/no\] because … |
-| Reduce/Improve Productivity<sup>2</sup> | \[rating\] because … | \[rating\] because … | \[rating\] because … | \[rating\] because … | \[rating\] because … |
+| Usage<sup>1</sup> | \[no\] because I am a designer | \[no\] because I like to make my own plan on what to make | \[yes] because in a few rare cases I asked it to help me come up with ideas on how to acheive something when I had no idea how. I used that as direction to find more resources online to create the code, making sure I'm figuring it out myself.  | \[yes\] because I actually used the debugging of ChatGPT a lot, javascript often does not let you know where the error is and ChatGPT saved me a lot of time in helping me find the errors. | \[yes/no\] because … |
+| Reduce/Improve Productivity<sup>2</sup> | \[N/A\] because I didn't use AI | \[N/A\] because I didn't use AI | \[YES-7\] because ChatGPT is personalized responses whereas forums sometimes don't provide your use case | \[YES-7\] because most of the time during debugging is used on finding the error. Once I spent 15 mins and still can't figure out why something isn't working, ChatGPT was great in helping with the debug. | \[rating\] because … |
 
 [1] I used / did not use this tool for X aspect of the project because …  
 [2] This tool makes my productivity for X aspect (1-Much Reduced, 2-Reduced, 3-Slightly Reduced, 4-Not Reduced nor Improved, 5-Slightly Improved, 6-Improved, 7-Much Improved)
@@ -61,29 +83,9 @@ Describe how you used Generative AI tools to create this final project (a page m
 
 Attach all the prompts you’ve used (e.g., for ChatGPT you can anonymously [share](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq) your chat history).
 
-
-### Add more subsections for the GenAI tools you've used, e.g., Copilot, etc.
-
-Copy all the content under the [ChatGPT Usage](#chatgpt-usage) section to answer the same questions for this tool.
+My prompt's weren't saved, but I would paste a lot of my code into chatGPT after I couldn't debug it myself and ask it what is wrong in my code so they were usually "Why is my code for xxx not working? I've tried xxx already and there is xxx message in the console" then a huge chunk of code. I would sometimes also paste code from tutorials online and ask it to explain why something works or why someone did something that certain way. 
 
 
----
-
-# **FP3 \- Final Project Check-in**
-
-Document the changes and progress of your project. How have you followed or changed your implementation & GenAI use plan and why? Remember to commit your code to save your progress.
-
-## Implementation Plan Updates
-
-- [ ] ...
-
-## Generative AI Use Plan Updates
-
-- [ ] ...
-
-Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-generative-ai-use-and-reflection).
-
----
 
 # **FP2 \- Evaluation of the Final project**
 
