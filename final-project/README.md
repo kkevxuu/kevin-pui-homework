@@ -85,6 +85,17 @@ Attach all the prompts you’ve used (e.g., for ChatGPT you can anonymously [sha
 
 My prompt's weren't saved, but I would paste a lot of my code into chatGPT after I couldn't debug it myself and ask it what is wrong in my code so they were usually "Why is my code for xxx not working? I've tried xxx already and there is xxx message in the console" then a huge chunk of code. I would sometimes also paste code from tutorials online and ask it to explain why something works or why someone did something that certain way. 
 
+WAVE Screenshots
+
+1. Main page
+![Wave Result](./images/1.png)
+![Wave Result](./images/2.png)
+2. Project page
+![Wave Result](./images/3.png)
+![Wave Result](./images/4.png)
+3. About page
+![Wave Result](./images/5.png)
+![Wave Result](./images/6.png)
 
 
 # **FP2 \- Evaluation of the Final project**
