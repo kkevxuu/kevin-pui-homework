@@ -9,13 +9,10 @@
   background-color: rgb(255, 255, 255);
   margin: 0rem;
   overflow: hidden;
-   
 }
-
 
 .bodyp2 {
   background-color: white;
-  
 }
 
 #image-track {
@@ -25,8 +22,7 @@
   left: 50%;
   top: 50%;
   transform: translate(0%, -50%); 
-  user-select: none; /* -- Prevent image highlighting -- */
-
+  user-select: none; /* prevent image highlighting */
 }
 
 .image {
@@ -37,16 +33,14 @@
   user-select: none;
 }
 
-
-
-/* NAVIGATION*/
+/* navigation */
 
 nav {
   position: fixed;
   top: 0;
   margin-top: 4.0vh;
   display: flex;
-  justify-content: flex-end; /*justifies everything to right*/
+  justify-content: flex-end; /* justifies everything to right */
   align-items: baseline;
   left: 50%;
   transform: translateX(-50%);
@@ -57,55 +51,45 @@ nav {
   font-weight: 700;
   font-size: 64px;
   color:#000000;
-
 }
-
 
 .worklink, .aboutlink{
   font-weight: 400;
   font-size: 24px;
 }
 
-
 .navleftbox{
-  margin-right: auto; /*justifies to the left*/
+  margin-right: auto; /* justifies to the left */
   padding-left: 5vw;
-
-
-
 }
 
 .navrightbox{
   padding-right: 5vw;
   display: flex;
-
 }
 
 .navbox2{
   padding-left: 3.5vw;
 }
 
-
-
-
 nav a {
-  color: #818181; /* Default color */
+  color: #818181; /* default color */
   text-decoration: none;
 }
 
 nav a.active {
-  color: #000000; /* Highlighted color */
+  color: #000000; /* highlighted color */
 }
 
+/* project page */
 
-/* PROJECT PAGE */
 .titlebox{
   top: 0;
   margin-top: 5.2vh;
   display: flex;
   align-items: baseline;
-
 }
+
 .projecttitle{
   margin-left: 20.3vw;
   font-size: 32px;
@@ -120,7 +104,6 @@ nav a.active {
   margin-left: 13%;
   margin-right: 13%;
 }
-
 
 .descriptionbox1, .descriptionbox2, .descriptionbox3{
   width: 20%;
@@ -158,46 +141,42 @@ nav a.active {
   margin-bottom: 5vh;
 }
 
+/* image grid */
 
-/*IMAGE GRID */
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates a 1x2 grid */
-  grid-gap: 0.1vw; /* Adaptive space between images */
-  width: 59.5%; /* Fixed grid width */
-  margin: 0 auto; /* Center the grid */
-
+  grid-template-columns: repeat(2, 1fr); /* create 1x2 grid */
+  grid-gap: 0.1vw; /* space between images */
+  width: 59.5%; 
+  margin: 0 auto; /* center grid */
   margin-bottom: 5vh;
 }
 
 .image-grid img {
-  width: 100%; /* Make images fill their grid cell */
-  height: 100%; /* Make images take up the full height of the grid cell */
-  object-fit: cover; /* Ensures images scale and crop as needed to fill the grid cell */
-  display: block; /* Removes unwanted bottom space */
-  align-self: center; /* Aligns images vertically within their cell */
+  width: 100%; /* images fill grid cell */
+  height: 100%;
+  object-fit: cover; /* images scale and crop to fill grid cell */
+  display: block; /* removes bottom space */
+  align-self: center; /* align images vertically within cell */
 }
-/* Additional wrapper to control overall grid height */
+
+/* additional wrapper to control overall grid height */
+
 .image-grid-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Full width of the container */
-  height: auto; /* Height adapts to content */
-  overflow: hidden; /* Prevents overflow issues */
+  width: 100%; /* full width ofcontainer */
+  height: auto; /* height adapts to content */
+  overflow: hidden; /* prevents overflow issues */
 }
-
-
 
 @media (max-width: 600px) {
   .image-grid {
-    grid-template-columns: 1fr; /* For 1 image */
+    grid-template-columns: 1fr; /* 1 image */
     grid-gap: 5vh;
   }
 }
-
-
-
 
 hr{
   border: 0;  
@@ -205,30 +184,26 @@ hr{
   width: 59.5vw; 
   margin-top: 0%;
   margin-bottom: 5vh;
-
-
 }
 
-/* ABOUT PAGE*/
+/* about page */
+
 .mainaboutbox{
   display: flex;
   flex-direction: column;
-
 }
-.topaboutbox{
 
-}
 .bottomaboutbox{
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Adjusts spacing between the child elements */
-  align-items: flex-start; /* Aligns items at the top of the container */
+  justify-content: space-between; 
+  align-items: flex-start; /* aligns items at top of the container */
   justify-content: center;
   width: 59.5vw;
   margin-left: auto;
   margin-right: auto;
-
 }
+
 .hellobox{
   top: 0;
   margin-top: 5.2vh;
@@ -247,26 +222,19 @@ hr{
   flex-direction: column;
 
 }
-.introduction{
 
-}
 .introductiontext1, .introductiontext2{
   font-size: 24px;
   font-weight: 400;
 }
-
-
-
 
 .details{
   margin-top: 5vh;
   display: flex;
   align-items: row;
   justify-content: space-between;
-
-
-
 }
+
 .aboutimagebox img{
   width: 20vw;
   margin-left: 7vw;
@@ -325,7 +293,6 @@ hr{
   color: black;
 }
 
-
 @media (max-width: 1100px) {
   .details {
     flex-direction: column;
@@ -346,46 +313,35 @@ hr{
   }
 }
 
-
-
-/*hide scrollbar*/
-
+/* hide scrollbar */
 
 .bodyp2 {
-  scrollbar-width: none; /* For Firefox */
-  overflow-y: scroll; /* Forces a scrollbar space */
+  scrollbar-width: none; 
+  overflow-y: scroll;
   margin: 0;
-  overflow-y: auto; /* Allows vertical scrolling */
 }
 
-/* Hide scrollbar completely */
 ::-webkit-scrollbar {
-  display: none; /* For Chrome, Edge, and Safari */
+  display: none; /* chrome, edge, safari */
 }
 
+/* back to top button */
 
-
-
-/*back to top button*/
-
-/* Styling for the footer */
 .footer {
   text-align: center; 
   margin-top: 5vh;
   margin-bottom: 5vh;
-
 }
 
-/* Styling button */
 #back-to-top {
-  font-size: 60px; /* Size of the symbol */
-  font-weight: 400; /* Makes it bold */
-  background-color: transparent; /* No background */
-  border: none; /* Removes border */
-  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 60px; 
+  font-weight: 400; 
+  background-color: transparent; 
+  border: none; 
+  cursor: pointer; 
 }
 
-/*percentage scroll*/
+/* percentage scroll */
 
 #scroll-indicator {
   position: fixed;
